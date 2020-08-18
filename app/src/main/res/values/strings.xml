@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NetworkActivity</string>
+    <string name="pull_message">Pull</string>
 </resources>
