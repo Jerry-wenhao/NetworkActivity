@@ -30,8 +30,6 @@ public class MainActivity extends AppCompatActivity {
     String url = "https://twc-android-bootcamp.github.io/fake-data/data/default.json";
 
     Gson gson = new Gson();
-    Wrapper wrapper;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
