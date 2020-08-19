@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.button)
     Button buttonGetMessage;
 
+    String url = "https://twc-android-bootcamp.github.io/fake-data/data/default.json";
+
     Gson gson = new Gson();
     Wrapper wrapper;
 
@@ -40,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 OkHttpClient okHttpClient = new OkHttpClient();
-                final Request request = new Request.Builder().url("https://twc-android-bootcamp.github.io/fake-data/data/default.json").build();
+                final Request request = new Request.Builder().url(url).build();
                 Call call = okHttpClient.newCall(request);
 
                 call.enqueue(new Callback() {
@@ -60,14 +62,20 @@ public class MainActivity extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
+                                dataHandler(message);
                             }
                         });
-
                     }
                 });
             }
         });
+    }
+
+    private void dataHandler(String message) {
+        Wrapper wrapper = gson.fromJson(message, Wrapper.class);
+        if (wrapper.getData().size() > 0) {
+            Toast.makeText(MainActivity.this, wrapper.getData().get(0).getName(), Toast.LENGTH_SHORT).show();
+        }
     }
 }
 
