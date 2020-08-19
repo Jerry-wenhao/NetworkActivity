@@ -1,13 +1,13 @@
 package com.xiawenhao.networkactivity;
 
-public class Data {
+public class Person {
     private String name;
     private String avatar;
 
-    public Data() {
+    public Person() {
     }
 
-    public Data(String name, String avatar) {
+    public Person(String name, String avatar) {
         this.name = name;
         this.avatar = avatar;
     }
@@ -15,6 +15,7 @@ public class Data {
     public String getName() {
         return name;
     }
+
 
     public void setName(String name) {
         this.name = name;

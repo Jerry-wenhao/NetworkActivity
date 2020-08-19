@@ -2,11 +2,12 @@ package com.xiawenhao.networkactivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.DownloadManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.google.gson.Gson;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -25,6 +26,9 @@ import okhttp3.Response;
 public class MainActivity extends AppCompatActivity {
     @BindView(R.id.button)
     Button buttonGetMessage;
+
+    Gson gson = new Gson();
+    Wrapper wrapper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
