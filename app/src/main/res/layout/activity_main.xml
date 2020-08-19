@@ -16,4 +16,15 @@
         android:text="@string/pull_message"
         />
 
+    <Button
+        android:id="@+id/count_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/button_start"
+        android:layout_marginEnd="@dimen/button_start"
+        android:layout_marginTop="@dimen/count_button_top"
+        android:textAllCaps="false"
+        android:text="@string/counter"
+        />
+
 </FrameLayout>

@@ -2,4 +2,5 @@
 <resources>
     <dimen name="button_start">160dp</dimen>
     <dimen name="button_top">120dp</dimen>
+    <dimen name="count_button_top">180dp</dimen>
 </resources>
